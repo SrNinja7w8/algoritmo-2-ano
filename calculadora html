@@ -19,3 +19,58 @@
     <script src='aa.js'></script>
   </body>
 </html>
+
+html {
+    background-color: gray;
+}
+
+.as {
+  font-size: 80px;
+  text-align: center;
+}
+
+.caixa {
+  width: 500px;
+  height: 600px;
+  background-color: azure;
+  border: solid white 3px;
+  border-radius: 10px;
+  transform: translate(700px, 20px);
+  box-shadow: 0px 0px 15px 10px black;
+}
+
+.visor {
+    width: 496px;
+    height: 80px;
+    border: solid black 2px;
+    border-radius: 10px;
+    
+}
+
+.zero {
+  text-align: right;
+  font-size: 60px;
+  transform: translate(-5px, 7px);
+}
+
+.num {
+  width: 50px;
+  height: 50px;
+  background-color: azure;
+  position: relative;
+  border: solid black 1px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+nmrr = document.getElementById('nmrr')
+num = document.querySelector('.num')
+
+for(let i = 0; i < 16; i++) {
+   a = document.createElement('div');
+   nmrr.appendChild(a)
+   a.id = i
+   a.textContent = i
+   a.classList.add('num')
+   
+}
