@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>aa</title>
+    <meta charset='UTF-8'>
+    <meta name='vieweport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' href='aa.css'>
+
+  </head>
+  <body>
+    <div class='as'>calculadora</div>
+    <div class='caixa' id='cai'>
+      <div class='visor'>
+       <div class='zero'>0</div> 
+     </div>
+     <div class='nmr' id='nmrr'></div>
+    </div>
+    <script src='aa.js'></script>
+  </body>
+</html>
