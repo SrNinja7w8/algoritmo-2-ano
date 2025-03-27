@@ -11,11 +11,14 @@ html {
 }
 
 .tit {
-  padding-left: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100px;
-  transform: translateX(105px);
+  transform: translate(97px, 10px);
   font-size: 20px;
   border-bottom: solid black 1px;
+  font-family: ghos;
+  text-align: center;
 }
 
 .menu {
@@ -76,25 +79,33 @@ html {
 
 .cxz {
    position: relative;
-   background-color: crimson;
-   width: 200px;
+   width: 230px;
    height: 20px;
-   border: solid black 1px;
-   border-radius: 10px;
-   transform: translate(25px, 22px);
+   border: solid white 1px;
+   border-radius: 3px;
+   transform: translate(30px, 8px);
    text-align: center;
    margin-top: 7px;
+   background-image: radial-gradient(circle, red, black);
+   color: white;
+   font-family: ghos;
+   padding-top: 2px;
+   box-shadow: 0px 0px 9px 2px red;
+   padding-left: 2px;
+   padding-right: 2px;
+   padding-bottom: 2px;
+   
 }
 .conteinerAddRmv {
   transform: translate(5px, 400px);
   position: absolute;
 }
 
-.tarefass {
+.tarefassq{
   position: absolute;
-  transform: translate(40px, 10px);
-  height: 10px;
+  transform: translate(40px, 20px);
   width: 250px;
+  border: solid black 1px;
 }
 
 .rmvT {
@@ -106,7 +117,8 @@ html {
   text-align: center;
   position: relative;
   line-height: 20px;
-  transform: translate(-50px, -20px);
+  transform: translate(-55px, -18px);
+  color: black;
 }
 
 .cliT {
@@ -118,10 +130,13 @@ html {
   text-align: center;
   position: relative;
   line-height: 20px;
-  transform: translate(-25px, -42px);
+  transform: translate(-30px, -40px);
+  color: black;
+  font-family: arial;
 }
 
+
 @font-face {
-  font-family: "taxa";
-  src: url(tachado.ttf);
+  font-family: "ghos";
+  src: url(ghost.otf);
 }
