@@ -92,9 +92,8 @@ const EntradaAdd = function(event) {
 Menu.addEventListener('click', BotaoMenu)
 /*botão de adicionar*/
 BotaodeAdd.addEventListener('click', BotaoAdd)
-/*entrada do adicionar*/
+/*entrada do adicionar, remover e concluir*/
 inputAdd.addEventListener('keyup', EntradaAdd)
-/*para remover e Concluir*/
 
 
 
