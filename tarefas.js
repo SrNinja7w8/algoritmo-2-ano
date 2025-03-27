@@ -22,7 +22,6 @@ const BotaoMenu = function() {
         inputA.style.display = "none"
         rmvy.style.display = "none"
         inputR.style.display = "none"
-        
     }
 }
 /*função do adicionar*/
@@ -35,7 +34,6 @@ const BotaoMenu = function() {
         inputA.value = ""
     }
  }
-
 /*para remover*/
 const TrmvT = function() {
     this.parentElement.remove()
@@ -51,13 +49,11 @@ const TcliT = function() {
      this.parentElement.firstChild.textContent = this.parentElement.firstChild.textContent.replace(sin, "")
    }
 }
-
 /*variaveis de apoio da "Função da entrada do adicionar*/
 let i = 1
 let TarefaID = ""
 let Tarefas = []
 let ListaDeIdsDasTarefas = []
- 
 /*Função da entrada do adicionar*/
 const EntradaAdd = function(event) {
     if(event.key === "Enter") {
@@ -65,31 +61,33 @@ const EntradaAdd = function(event) {
             alert("preencha os campos")
         }
         else {
-            nomeDaTarefa = inputAdd.value
-            Tarefas.push(nomeDaTarefa)
-            const Tarefa = document.createElement("div")
-            const TarefaRMV = document.createElement("div")
-            const TarefaCLI = document.createElement("div")
-            TarefaRMV.textContent = "-"
-            TarefaCLI.textContent = "✓"
-            Tarefa.textContent = Tarefas[i-1]
-            TarefaID = i + "div"
-            Tarefa.id = TarefaID
-            ListaDeIdsDasTarefas.push(TarefaID)
-            TarefasCont.appendChild(Tarefa)
-            Tarefa.appendChild(TarefaRMV)
-            Tarefa.appendChild(TarefaCLI)
-            Tarefa.classList.add("cxz")
-            TarefaRMV.classList.add("rmvT")
-            TarefaCLI.classList.add("cliT")
-            TarefaRMV.addEventListener('click', TrmvT)
-            TarefaCLI.addEventListener('click', TcliT)
-            i += 1
-            inputAdd.value = ""
+           if(inputAdd.value.length <= 17) {
+                nomeDaTarefa = inputAdd.value
+                Tarefas.push(nomeDaTarefa)
+                const Tarefa = document.createElement("div")
+                const TarefaRMV = document.createElement("div")
+                const TarefaCLI = document.createElement("div")
+                TarefaRMV.textContent = "-"
+                TarefaCLI.textContent = "✓"
+                Tarefa.textContent = Tarefas[i-1]
+                TarefasCont.appendChild(Tarefa)
+                Tarefa.appendChild(TarefaRMV)
+                Tarefa.appendChild(TarefaCLI)
+                Tarefa.classList.add("cxz")
+                TarefaRMV.classList.add("rmvT")
+                TarefaCLI.classList.add("cliT")
+                TarefaRMV.addEventListener('click', TrmvT)
+                TarefaCLI.addEventListener('click', TcliT)
+                i += 1
+                inputAdd.value = ""
+           }
+           else {
+              alert("texto muito grande")
+              inputAdd.value = ""
+           }
         }
     }
 }
-
 /*botão de Menu*/
 Menu.addEventListener('click', BotaoMenu)
 /*botão de adicionar*/
