@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class Main {
+	public static int[] buscaBinaria(int[] array, int alvo) {
+	int inicio = 0;
+	int po = 0;
+	int[] vet = new int[2];
+	int fim = array.length -1;
+	while(inicio <= fim) {
+		int meio = (inicio + fim)/2;
+		if(array[meio] == alvo) {
+			vet[0] = meio+1;
+			vet[1] = po;
+			return vet;
+			  }
+		else {
+			if(alvo > array[meio]) {
+				inicio = meio+1;
+				po += 1;
+			     }
+			     else {
+			     	fim = meio-1;
+			     	po += 1;
+			     }
+		}
+    }
+    vet[0] = -1;
+    vet[1] = -1;
+    return vet;
+}
+
+	
+public static void main(String[] args) {
+	int[] vect = new int[500];
+	Scanner Scan = new Scanner(System.in);
+	for(int i=0; i<= 499; i++) {
+		vect[i] = i+1;
+		}
+		System.out.print("Número: ");
+		int nu = Scan.nextInt();
+	int[] result = buscaBinaria(vect, nu);
+	if(result[0] != -1) {
+		System.out.println("seu número foi encontrado: " + result[0] + " com " + result[1] + " cortes");
+	}
+	else {
+			System.out.println("seu número não foi encontrado");
+			}
+			Scan.close();
+		}
+	}
